@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url(../pictures/homebg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+
+
+.menu-btn{
+    color:rgb(88, 152, 209);
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.navbar {
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0px;
+    background-color: rgb(8, 3, 39);
+    box-shadow: 0 0 14px royalblue;
+}
+
+
+.navbar .logo {
+    color:darkgrey;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    max-width:max-content;
+    
+}
+
+.navbar .menu li a {
+    display: block;
+    margin-left: 20px;
+    color: rgb(231, 234, 239);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.navbar .menu li a i {
+    color: rgb(231, 201, 211);
+}
+
+
+.navbar .menu li a:hover, .navbar .menu li a:focus{
+    border-bottom: 4px solid rgb(231, 201, 211);
+}
+
+.content {
+    padding-top: 226px;
+    text-align: center;
+    padding-right: 70px;
+    position: relative;
+    font-size: 18px;
+}
+
+.content button {
+    text-align: center;
+    width: 180px;
+    color: rgb(242, 242, 247);
+    font-size: 15px;
+    padding: 12px 0;
+    background: rgb(8, 3, 39);
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: #333;
+}
+
+@media  screen and (max-width: 820px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0%;
+        background-color: rgb(8, 3, 39);
+        padding-top: 80px;
+        transition: all 0.3s ease;
+        padding-left: 230px;
+
+    }
+
+
+    .navbar .menu li{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .navbar .menu li a{
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    .navbar .menu.active{
+        left: 0; 
+
+    }
+}
